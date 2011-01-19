@@ -127,6 +127,11 @@ namespace ICSharpCode.SharpDevelop.Project
 				fileNodeStatus = FileNodeStatus.InProject;
 				SetIcon();
 			}
+			else if(fileNodeStatus != FileNodeStatus.Missing && viewContent == null) 
+			{
+				fileNodeStatus = FileNodeStatus.Missing;
+				SetIcon();
+			}
 		}
 		
 //		protected override void Initialize()
